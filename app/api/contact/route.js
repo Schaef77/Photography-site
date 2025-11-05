@@ -38,8 +38,8 @@ export async function POST(request) {
     console.log('Using API key:', process.env.RESEND_API_KEY ? 'API key found' : 'API key missing');
 
     const data = await resend.emails.send({
-      from: 'onboarding@resend.dev', // You can customize this later with your domain
-      to: 'adrians777@icloud.com', // Your email where you'll receive messages (must match Resend account)
+      from: 'Adrian Schaefer Photography <onboarding@resend.dev>',
+      to: 'adrianschaeferphotos@gmail.com',
       replyTo: email, // User's email so you can reply directly
       subject: `Contact Form: ${subject}`,
       html: `
