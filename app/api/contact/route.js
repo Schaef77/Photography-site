@@ -34,7 +34,7 @@ export async function POST(request) {
     }
 
     // Send email via Resend
-    console.log('Attempting to send email to:', 'adrians777@icloud.com');
+    console.log('Attempting to send email to:', 'adrianschaeferphotos@gmail.com');
     console.log('Using API key:', process.env.RESEND_API_KEY ? 'API key found' : 'API key missing');
 
     const data = await resend.emails.send({
