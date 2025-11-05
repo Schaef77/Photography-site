@@ -1,0 +1,22 @@
+.masonry-list {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  padding-bottom: 60px;
+}
+
+.masonry-item-wrapper {
+  position: absolute;
+  will-change: transform, width, height, opacity;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.masonry-item-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  overflow: hidden;
+}

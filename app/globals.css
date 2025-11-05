@@ -1,26 +1,156 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: 'Bespoke Stencil';
+  src: url('/fonts/BespokeStencil-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@font-face {
+  font-family: 'Bespoke Stencil';
+  src: url('/fonts/BespokeStencil-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: 'Bespoke Stencil';
+  src: url('/fonts/BespokeStencil-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@font-face {
+  font-family: 'Bespoke Stencil';
+  src: url('/fonts/BespokeStencil-Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bespoke Stencil';
+  src: url('/fonts/BespokeStencil-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bespoke Stencil';
+  src: url('/fonts/BespokeStencil-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bespoke Stencil';
+  src: url('/fonts/BespokeStencil-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bespoke Stencil';
+  src: url('/fonts/BespokeStencil-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bespoke Stencil';
+  src: url('/fonts/BespokeStencil-Extrabold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bespoke Stencil';
+  src: url('/fonts/BespokeStencil-ExtraboldItalic.woff2') format('woff2');
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  background: #141414;
+  color: #fff;
+}
+
+/* Gold hover effect with subtle pop animation for lightbox buttons */
+.yarl__button {
+  transition: color 0.3s ease, transform 0.2s ease !important;
+}
+
+.yarl__button:hover {
+  color: #c9a961 !important;
+  transform: scale(1.1) !important;
+}
+
+/* Close button positioning */
+.yarl__toolbar_button_close {
+  right: 5px !important;
+}
+
+.yarl__navigation_prev,
+.yarl__navigation_next {
+  transition: color 0.3s ease, transform 0.2s ease !important;
+  transform: scale(1) !important;
+  font-size: 64px !important;
+  top: 50% !important;
+  transform: translateY(-50%) scale(1) !important;
+}
+
+.yarl__navigation_prev:hover,
+.yarl__navigation_next:hover {
+  color: #c9a961 !important;
+  transform: translateY(-50%) scale(1.1) !important;
+}
+
+.yarl__navigation_prev {
+  left: 25px !important;
+}
+
+.yarl__navigation_next {
+  right: 25px !important;
+}
+
+/* Pop animation for all interactive buttons and links */
+a, button {
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+a:hover, button:hover {
+  transform: scale(1.05);
+}
+
+/* Prevent pop animation on navbar logo */
+.navbar-logo:hover {
+  transform: none !important;
+}
+
+/* Cal.com embed styling - fix grey bar and ensure proper sizing */
+[data-cal-namespace] {
+  background-color: transparent !important;
+}
+
+[data-cal-namespace] iframe {
+  background-color: transparent !important;
 }
