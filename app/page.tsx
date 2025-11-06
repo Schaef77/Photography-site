@@ -48,7 +48,7 @@ export default function Home() {
       <style jsx>{`
         @media (max-width: 768px) {
           .hero-image {
-            object-position: 30% center !important;
+            object-position: 20% center !important;
           }
         }
       `}</style>
