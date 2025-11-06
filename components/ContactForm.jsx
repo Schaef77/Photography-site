@@ -90,7 +90,7 @@ export default function ContactForm() {
       opacity: isVisible ? 1 : 0,
       transition: 'opacity 600ms ease-out'
     }}>
-      <form onSubmit={handleSubmit(onSubmit)} style={{ maxWidth: '600px', margin: '0 auto' }}>
+      <form onSubmit={handleSubmit(onSubmit)} style={{ maxWidth: '600px', margin: '0 auto' }} className="contact-form">
         {/* Honeypot field - hidden from users, catches bots */}
         <div style={{ position: 'absolute', left: '-9999px', opacity: 0 }}>
           <input
@@ -273,6 +273,12 @@ export default function ContactForm() {
         @keyframes spin {
           to {
             transform: rotate(360deg);
+          }
+        }
+
+        @media (max-width: 480px) {
+          .contact-form {
+            padding: 0 0.5rem;
           }
         }
       `}</style>

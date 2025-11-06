@@ -261,14 +261,14 @@ export default function Navbar({ isHomepage = false }) {
           ref={mobileMenuRef}
           style={{
             position: 'fixed',
-            top: '64px',
+            top: '74px',
             left: '20px',
             right: '20px',
             backgroundColor: '#1a1f2e',
             boxShadow: '0 4px 10px rgba(0,0,0,0.5)',
             zIndex: 9998,
             padding: '20px 32px',
-            maxHeight: 'calc(100vh - 64px)',
+            maxHeight: 'calc(100vh - 74px)',
             overflowY: 'auto'
           }}
           className="mobile-menu"

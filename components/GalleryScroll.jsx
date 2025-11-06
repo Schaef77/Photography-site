@@ -362,7 +362,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
                       textAlign: 'center'
                     }}
                   >
-                   <h2 style={{ 
+                   <h2 style={{
   fontSize: '22px',
   fontWeight: 500,
   color: 'white',

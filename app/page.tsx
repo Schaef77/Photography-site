@@ -21,6 +21,7 @@ export default function Home() {
 
       {/* Hero Section - 75% Viewport */}
       <div
+        className="hero-section"
         style={{
           position: 'relative',
           width: '100%',
@@ -35,6 +36,7 @@ export default function Home() {
           alt="Adrian Schaefer Photography"
           fill
           priority
+          className="hero-image"
           style={{
             objectFit: 'cover',
             objectPosition: 'center calc(50% - 15px)'
@@ -42,6 +44,14 @@ export default function Home() {
           quality={95}
         />
       </div>
+
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .hero-image {
+            object-position: 30% center !important;
+          }
+        }
+      `}</style>
 
       {/* Featured Gallery */}
       <FeaturedGallery />

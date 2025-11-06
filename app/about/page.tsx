@@ -64,6 +64,12 @@ export default function About() {
           padding-right: 32px;
         }
 
+        @media (max-width: 768px) {
+          .about-container {
+            padding-top: 120px;
+          }
+        }
+
         .about-title {
           color: white;
           font-size: 3rem;

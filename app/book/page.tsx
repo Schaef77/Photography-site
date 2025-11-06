@@ -27,7 +27,7 @@ export default function Book() {
     >
       <Navbar />
 
-      <div className="px-8 max-w-4xl mx-auto" style={{ paddingTop: '90px', paddingBottom: '80px' }}>
+      <div className="px-8 max-w-4xl mx-auto book-container" style={{ paddingTop: '90px', paddingBottom: '80px' }}>
         <h1 className="text-white text-5xl font-medium text-center" style={{ marginBottom: '15px' }}>
           Book a Session
         </h1>
@@ -60,6 +60,14 @@ export default function Book() {
       </div>
 
       <Footer />
+
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .book-container {
+            padding-top: 120px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

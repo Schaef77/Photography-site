@@ -55,10 +55,11 @@ export default function FeaturedGallery() {
           fontWeight: '600',
           marginBottom: '3rem',
           textAlign: 'center',
-          color: 'white',
+          color: '#d1d5db',
           fontFamily: 'Montserrat, sans-serif',
           letterSpacing: '0.02em'
-        }}>
+        }}
+        className="featured-title">
           Featured Work
         </h2>
 
@@ -172,6 +173,11 @@ export default function FeaturedGallery() {
           .gallery-item {
             grid-column: span 1 !important;
             grid-row: span 1 !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .featured-title {
+            font-size: 1.75rem !important;
           }
         }
       `}</style>

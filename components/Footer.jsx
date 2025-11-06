@@ -32,9 +32,9 @@ export default function Footer({ showInquiriesButton = true }) {
                   fontFamily: 'Montserrat, sans-serif',
                   fontSize: '16px',
                   fontWeight: 500,
-                  color: 'white',
+                  color: '#d1d5db',
                   backgroundColor: 'transparent',
-                  border: '2px solid white',
+                  border: '2px solid #d1d5db',
                   borderRadius: '4px',
                   padding: '12px 28px',
                   cursor: 'pointer',
@@ -46,8 +46,8 @@ export default function Footer({ showInquiriesButton = true }) {
                   e.currentTarget.style.color = '#c9a961';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'white';
-                  e.currentTarget.style.color = 'white';
+                  e.currentTarget.style.borderColor = '#d1d5db';
+                  e.currentTarget.style.color = '#d1d5db';
                 }}
               >
                 For Inquiries
@@ -64,12 +64,12 @@ export default function Footer({ showInquiriesButton = true }) {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: 'white',
+              color: '#d1d5db',
               transition: 'color 0.3s ease',
               margin: showInquiriesButton ? '0' : '0 auto'
             }}
             onMouseEnter={(e) => e.currentTarget.style.color = '#c9a961'}
-            onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+            onMouseLeave={(e) => e.currentTarget.style.color = '#d1d5db'}
           >
             <svg
               width="32"

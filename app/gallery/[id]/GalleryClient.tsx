@@ -72,7 +72,7 @@ export default function GalleryClient({ gallery }: { gallery: Gallery }) {
       <div className="px-8" style={{ paddingTop: '75px' }}>
         <button
           onClick={() => router.push(`/galleries?gallery=${gallery.id}`)}
-          className="text-white mb-8"
+          className="text-white mb-8 back-button"
           style={{
             fontSize: '22px',
             fontWeight: 500,
@@ -81,12 +81,12 @@ export default function GalleryClient({ gallery }: { gallery: Gallery }) {
             padding: '8px 0',
             cursor: 'pointer',
             transition: 'color 0.3s ease',
-            color: 'white',
+            color: '#d1d5db',
             marginLeft: '40px',
             marginTop: '35px'
           }}
           onMouseEnter={(e) => e.currentTarget.style.color = '#c9a961'}
-          onMouseLeave={(e) => e.currentTarget.style.color = 'white'}
+          onMouseLeave={(e) => e.currentTarget.style.color = '#d1d5db'}
         >
           ← Back
         </button>
@@ -124,6 +124,15 @@ export default function GalleryClient({ gallery }: { gallery: Gallery }) {
       />
 
       <Footer />
+
+      {/* Mobile responsive styles */}
+      <style jsx>{`
+        @media (max-width: 480px) {
+          .back-button {
+            margin-left: 15px !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }
