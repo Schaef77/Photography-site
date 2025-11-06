@@ -641,6 +641,130 @@
     ]
   },
   {
+    "id": "milan",
+    "title": "Milan",
+    "thumbnail": "/images/galleries/milan/milan_cover.jpg",
+    "thumbnailWidth": 1000,
+    "thumbnailHeight": 1500,
+    "photos": [
+      {
+        "src": "/images/galleries/milan/milan-1.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/images/galleries/milan/milan-10.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/images/galleries/milan/milan-11.jpg",
+        "width": 1312,
+        "height": 2000
+      },
+      {
+        "src": "/images/galleries/milan/milan-12.jpg",
+        "width": 1300,
+        "height": 2000
+      },
+      {
+        "src": "/images/galleries/milan/milan-13.jpg",
+        "width": 1333,
+        "height": 2000
+      },
+      {
+        "src": "/images/galleries/milan/milan-14.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/images/galleries/milan/milan-15.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/images/galleries/milan/milan-16.jpg",
+        "width": 1333,
+        "height": 2000
+      },
+      {
+        "src": "/images/galleries/milan/milan-17.jpg",
+        "width": 1333,
+        "height": 2000
+      },
+      {
+        "src": "/images/galleries/milan/milan-18.jpg",
+        "width": 1333,
+        "height": 2000
+      },
+      {
+        "src": "/images/galleries/milan/milan-19.jpg",
+        "width": 1333,
+        "height": 2000
+      },
+      {
+        "src": "/images/galleries/milan/milan-2.jpg",
+        "width": 2000,
+        "height": 1227
+      },
+      {
+        "src": "/images/galleries/milan/milan-20.jpg",
+        "width": 1327,
+        "height": 2000
+      },
+      {
+        "src": "/images/galleries/milan/milan-21.jpg",
+        "width": 1333,
+        "height": 2000
+      },
+      {
+        "src": "/images/galleries/milan/milan-22.jpg",
+        "width": 1333,
+        "height": 2000
+      },
+      {
+        "src": "/images/galleries/milan/milan-23.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/images/galleries/milan/milan-3.jpg",
+        "width": 1333,
+        "height": 2000
+      },
+      {
+        "src": "/images/galleries/milan/milan-4.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/images/galleries/milan/milan-5.jpg",
+        "width": 2000,
+        "height": 1333
+      },
+      {
+        "src": "/images/galleries/milan/milan-6.jpg",
+        "width": 2000,
+        "height": 867
+      },
+      {
+        "src": "/images/galleries/milan/milan-7.jpg",
+        "width": 1333,
+        "height": 2000
+      },
+      {
+        "src": "/images/galleries/milan/milan-8.jpg",
+        "width": 1457,
+        "height": 2000
+      },
+      {
+        "src": "/images/galleries/milan/milan-9.jpg",
+        "width": 1333,
+        "height": 2000
+      }
+    ]
+  },
+  {
     "id": "nice",
     "title": "Nice",
     "thumbnail": "/images/galleries/nice/nice_cover.jpg",
@@ -847,72 +971,72 @@
   {
     "id": "perpignan",
     "title": "Perpignan",
-    "thumbnail": "/images/galleries/perpignan/Perpignan_cover.jpg",
+    "thumbnail": "/images/galleries/perpignan/perpignan_cover.jpg",
     "thumbnailWidth": 1000,
     "thumbnailHeight": 1500,
     "photos": [
       {
-        "src": "/images/galleries/perpignan/Perpignan-1.jpg",
+        "src": "/images/galleries/perpignan/perpignan-1.jpg",
         "width": 2000,
         "height": 1333
       },
       {
-        "src": "/images/galleries/perpignan/Perpignan-10.jpg",
+        "src": "/images/galleries/perpignan/perpignan-10.jpg",
         "width": 1502,
         "height": 2000
       },
       {
-        "src": "/images/galleries/perpignan/Perpignan-11.jpg",
+        "src": "/images/galleries/perpignan/perpignan-11.jpg",
         "width": 2000,
         "height": 1333
       },
       {
-        "src": "/images/galleries/perpignan/Perpignan-12.jpg",
+        "src": "/images/galleries/perpignan/perpignan-12.jpg",
         "width": 1534,
         "height": 2000
       },
       {
-        "src": "/images/galleries/perpignan/Perpignan-13.jpg",
+        "src": "/images/galleries/perpignan/perpignan-13.jpg",
         "width": 1577,
         "height": 2000
       },
       {
-        "src": "/images/galleries/perpignan/Perpignan-2.jpg",
+        "src": "/images/galleries/perpignan/perpignan-2.jpg",
         "width": 1905,
         "height": 2000
       },
       {
-        "src": "/images/galleries/perpignan/Perpignan-3.jpg",
+        "src": "/images/galleries/perpignan/perpignan-3.jpg",
         "width": 2000,
         "height": 1333
       },
       {
-        "src": "/images/galleries/perpignan/Perpignan-4.jpg",
+        "src": "/images/galleries/perpignan/perpignan-4.jpg",
         "width": 1662,
         "height": 2000
       },
       {
-        "src": "/images/galleries/perpignan/Perpignan-5.jpg",
+        "src": "/images/galleries/perpignan/perpignan-5.jpg",
         "width": 2000,
         "height": 1873
       },
       {
-        "src": "/images/galleries/perpignan/Perpignan-6.jpg",
+        "src": "/images/galleries/perpignan/perpignan-6.jpg",
         "width": 1333,
         "height": 2000
       },
       {
-        "src": "/images/galleries/perpignan/Perpignan-7.jpg",
+        "src": "/images/galleries/perpignan/perpignan-7.jpg",
         "width": 1573,
         "height": 2000
       },
       {
-        "src": "/images/galleries/perpignan/Perpignan-8.jpg",
+        "src": "/images/galleries/perpignan/perpignan-8.jpg",
         "width": 2000,
         "height": 1333
       },
       {
-        "src": "/images/galleries/perpignan/Perpignan-9.jpg",
+        "src": "/images/galleries/perpignan/perpignan-9.jpg",
         "width": 2000,
         "height": 1333
       }
