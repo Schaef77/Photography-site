@@ -98,28 +98,27 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
 
       const itemLeft = index * itemWidth;
       const itemRight = itemLeft + itemWidth;
+      const itemCenter = itemLeft + (itemWidth / 2);
 
-      // Calculate progress as item travels across viewport
-      // When item enters from right: progress = -1
-      // When item is centered: progress = 0
-      // When item exits left: progress = 1
-      const viewportLeft = scrollLeft;
-      const viewportRight = scrollLeft + viewportWidth;
+      let progress, parallaxAmount;
 
-      // Total travel distance (from entering right edge to exiting left edge)
-      const totalTravel = viewportWidth + itemWidth;
-
-      // Current position in that travel (0 when entering right, totalTravel when exiting left)
-      const currentTravel = viewportRight - itemRight;
-
-      // Normalized progress from -1 to 1 spanning full viewport travel
-      const progress = (currentTravel / totalTravel) * 2 - 1;
-
-      // Image wrapper is 150% width positioned at -30%
-      // With 50% extra width on each side, we can move ±28% safely
-      // This ensures continuous parallax across the entire viewport travel
-      const maxParallax = isMobile ? 5 : 28; // Balanced for mobile - enough movement without leaving frame
-      const parallaxAmount = isMobile ? -(progress * maxParallax) : (progress * maxParallax); // Invert direction on mobile
+      if (isMobile) {
+        // Mobile: Simple parallax based on distance from viewport center
+        const viewportCenter = scrollLeft + (viewportWidth / 2);
+        const distanceFromCenter = itemCenter - viewportCenter;
+        // Normalize by half viewport width for smoother effect
+        const normalizedDistance = distanceFromCenter / (viewportWidth / 2);
+        // Clamp between -1 and 1
+        const clampedDistance = Math.max(-1, Math.min(1, normalizedDistance));
+        parallaxAmount = clampedDistance * 3; // 3% max movement
+      } else {
+        // Desktop: Original complex parallax calculation
+        const viewportRight = scrollLeft + viewportWidth;
+        const totalTravel = viewportWidth + itemWidth;
+        const currentTravel = viewportRight - itemRight;
+        progress = (currentTravel / totalTravel) * 2 - 1;
+        parallaxAmount = progress * 28;
+      }
 
       // Use translate3d for better GPU acceleration
       imageWrapper.style.transform = `translate3d(${parallaxAmount}%, 0, 0)`;
