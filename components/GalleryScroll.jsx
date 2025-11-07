@@ -118,7 +118,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       // Image wrapper is 150% width positioned at -30%
       // With 50% extra width on each side, we can move ±28% safely
       // This ensures continuous parallax across the entire viewport travel
-      const maxParallax = isMobile ? 3 : 28; // Small parallax on mobile to prevent disappearing
+      const maxParallax = isMobile ? 8 : 28; // Increased for mobile to cover wider frame spacing
       const parallaxAmount = progress * maxParallax;
 
       // Use translate3d for better GPU acceleration
