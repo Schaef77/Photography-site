@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
   },
   verification: {
-    google: 'google-site-verification-placeholder', // User will need to replace this
+    google: 'google4be746e822485dd4',
   },
   alternates: {
     canonical: siteUrl,

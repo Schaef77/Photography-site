@@ -118,7 +118,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       // Image wrapper is 150% width positioned at -30%
       // With 50% extra width on each side, we can move ±28% safely
       // This ensures continuous parallax across the entire viewport travel
-      const maxParallax = isMobile ? 15 : 28; // Reduce parallax on mobile
+      const maxParallax = isMobile ? 8 : 28; // Much slower parallax on mobile
       const parallaxAmount = progress * maxParallax;
 
       // Use translate3d for better GPU acceleration
@@ -283,6 +283,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       className="fixed top-0 left-0 w-screen h-screen overflow-hidden"
       style={{
         paddingTop: isMobile ? '100px' : '145px',
+        paddingBottom: isMobile ? 'calc(100vh - 100px - 2vh - 56vh - 40px)' : '0',
         opacity: isVisible ? 1 : 0,
         transition: 'opacity 600ms ease-out',
         backgroundColor: '#141414'
@@ -386,7 +387,8 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       {/* Animated Counter */}
       <div style={{
         position: 'fixed',
-        bottom: isMobile ? 'calc(100vh - 100px - 56vh - 2vh - 60px)' : '40px',
+        top: isMobile ? 'calc(100px + 2vh + 56vh + 20px)' : 'auto',
+        bottom: isMobile ? 'auto' : '40px',
         left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 9999,
