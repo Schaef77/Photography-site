@@ -315,7 +315,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
         <div
           style={{
             display: 'flex',
-            alignItems: 'center',
+            alignItems: isMobile ? 'center' : 'flex-start',
             height: '100%',
             paddingLeft: isMobile ? '20vw' : '37.5vw',
             width: isMobile ? `${galleries.length * 65 + 40}vw` : `${galleries.length * 25 + 75}vw`
