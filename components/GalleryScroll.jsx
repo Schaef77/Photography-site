@@ -118,7 +118,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       // Image wrapper is 150% width positioned at -30%
       // With 50% extra width on each side, we can move ±28% safely
       // This ensures continuous parallax across the entire viewport travel
-      const maxParallax = isMobile ? 0 : 28; // Disable parallax on mobile to prevent disappearing images
+      const maxParallax = isMobile ? 2 : 28; // Very minimal parallax on mobile
       const parallaxAmount = progress * maxParallax;
 
       // Use translate3d for better GPU acceleration
@@ -190,10 +190,11 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       lastScrollTime.current = currentTime;
       lastScrollLeft.current = currentScroll;
 
-      // Update current gallery index based on which gallery is closest to viewport center
-      const itemWidth = isMobile ? windowDimensions.current.width * 0.65 : windowDimensions.current.width * 0.25;
+      // Update current gallery index based on scroll position
+      const isMobileNow = windowDimensions.current.width < 768;
+      const itemWidth = isMobileNow ? windowDimensions.current.width * 0.65 : windowDimensions.current.width * 0.25;
       const viewportCenter = windowDimensions.current.width / 2;
-      const paddingLeft = isMobile ? windowDimensions.current.width * 0.20 : windowDimensions.current.width * 0.375;
+      const paddingLeft = isMobileNow ? windowDimensions.current.width * 0.20 : windowDimensions.current.width * 0.375;
 
       // Find which gallery center is closest to viewport center
       let closestIndex = 0;
