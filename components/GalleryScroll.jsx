@@ -341,8 +341,8 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
                 <div
                   style={{
                     position: 'relative',
-                    width: isMobile ? '25vw' : '22vw',
-                    height: isMobile ? '35vh' : '60vh',
+                    width: isMobile ? '28.75vw' : '22vw',
+                    height: isMobile ? '40vh' : '60vh',
                     overflow: 'hidden',
                     margin: '0 auto'
                   }}
