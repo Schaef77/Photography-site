@@ -118,7 +118,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       // Image wrapper is 150% width positioned at -30%
       // With 50% extra width on each side, we can move ±28% safely
       // This ensures continuous parallax across the entire viewport travel
-      const maxParallax = isMobile ? 8 : 28; // Much slower parallax on mobile
+      const maxParallax = isMobile ? 4 : 28; // Very subtle parallax on mobile
       const parallaxAmount = progress * maxParallax;
 
       // Use translate3d for better GPU acceleration
@@ -143,7 +143,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       },
       {
         root: containerRef.current,
-        rootMargin: isMobile ? '0% 50% 0% 50%' : '50% 150% 50% 150%', // Tighter margin on mobile
+        rootMargin: isMobile ? '0% 20% 0% 20%' : '50% 150% 50% 150%', // Very tight margin on mobile
         threshold: 0
       }
     );
@@ -192,7 +192,10 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
 
       // Update current gallery index
       const itemWidth = isMobile ? windowDimensions.current.width * 0.65 : windowDimensions.current.width * 0.25;
-      const newIndex = Math.round(currentScroll / itemWidth);
+      // Account for left padding when calculating which gallery is centered
+      const paddingOffset = isMobile ? windowDimensions.current.width * 0.20 : windowDimensions.current.width * 0.375;
+      const adjustedScroll = currentScroll + paddingOffset;
+      const newIndex = Math.round(adjustedScroll / itemWidth);
       setCurrentGalleryIndex(newIndex);
 
       // Cancel any pending RAF to avoid duplicate updates
@@ -282,8 +285,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     <div
       className="fixed top-0 left-0 w-screen h-screen overflow-hidden"
       style={{
-        paddingTop: isMobile ? '100px' : '145px',
-        paddingBottom: isMobile ? 'calc(100vh - 100px - 2vh - 56vh - 40px)' : '0',
+        paddingTop: isMobile ? '84px' : '145px',
         opacity: isVisible ? 1 : 0,
         transition: 'opacity 600ms ease-out',
         backgroundColor: '#141414'
@@ -301,7 +303,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
         <div
           style={{
             display: 'flex',
-            alignItems: 'flex-start',
+            alignItems: 'center',
             height: '100%',
             paddingLeft: isMobile ? '20vw' : '37.5vw',
             width: isMobile ? `${galleries.length * 65 + 40}vw` : `${galleries.length * 25 + 75}vw`
@@ -387,8 +389,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       {/* Animated Counter */}
       <div style={{
         position: 'fixed',
-        top: isMobile ? 'calc(100px + 2vh + 56vh + 20px)' : 'auto',
-        bottom: isMobile ? 'auto' : '40px',
+        bottom: isMobile ? '30px' : '40px',
         left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 9999,
