@@ -70,7 +70,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
 
     // Wait for component to be fully mounted and visible
     const scrollTimeout = setTimeout(() => {
-      const itemWidth = isMobile ? window.innerWidth * 0.28 : window.innerWidth * 0.25;
+      const itemWidth = isMobile ? window.innerWidth * 0.32 : window.innerWidth * 0.25;
       const targetScroll = galleryIndex * itemWidth;
       container.scrollLeft = targetScroll;
       hasScrolledToInitial.current = true;
@@ -88,7 +88,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     const scrollLeft = container.scrollLeft;
     scrollLeftRef.current = scrollLeft;
 
-    const itemWidth = isMobile ? windowDimensions.current.width * 0.28 : windowDimensions.current.width * 0.25;
+    const itemWidth = isMobile ? windowDimensions.current.width * 0.32 : windowDimensions.current.width * 0.25;
     const viewportWidth = windowDimensions.current.width;
 
     // Only update visible galleries
@@ -192,9 +192,9 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
 
       // Update current gallery index based on scroll position
       const isMobileNow = windowDimensions.current.width < 768;
-      const itemWidth = isMobileNow ? windowDimensions.current.width * 0.28 : windowDimensions.current.width * 0.25;
+      const itemWidth = isMobileNow ? windowDimensions.current.width * 0.32 : windowDimensions.current.width * 0.25;
       const viewportCenter = windowDimensions.current.width / 2;
-      const paddingLeft = isMobileNow ? windowDimensions.current.width * 0.36 : windowDimensions.current.width * 0.375;
+      const paddingLeft = isMobileNow ? windowDimensions.current.width * 0.34 : windowDimensions.current.width * 0.375;
 
       // Find which gallery center is closest to viewport center
       let closestIndex = 0;
@@ -240,7 +240,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     };
 
     const snapToNearest = () => {
-      const itemWidth = isMobile ? windowDimensions.current.width * 0.28 : windowDimensions.current.width * 0.25;
+      const itemWidth = isMobile ? windowDimensions.current.width * 0.32 : windowDimensions.current.width * 0.25;
       const currentScroll = container.scrollLeft;
       const nearestIndex = Math.round(currentScroll / itemWidth);
       const targetScroll = nearestIndex * itemWidth;
@@ -320,8 +320,8 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
             display: 'flex',
             alignItems: isMobile ? 'center' : 'flex-start',
             height: '100%',
-            paddingLeft: isMobile ? '36vw' : '37.5vw',
-            width: isMobile ? `${galleries.length * 28 + 72}vw` : `${galleries.length * 25 + 75}vw`
+            paddingLeft: isMobile ? '34vw' : '37.5vw',
+            width: isMobile ? `${galleries.length * 32 + 68}vw` : `${galleries.length * 25 + 75}vw`
           }}
         >
           {galleries.map((gallery, index) => {
@@ -333,7 +333,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
                 onClick={() => router.push(`/gallery/${gallery.id}`)}
                 style={{
                   flexShrink: 0,
-                  width: isMobile ? '28vw' : '25vw',
+                  width: isMobile ? '32vw' : '25vw',
                   paddingTop: isMobile ? '2vh' : '1.5vw',
                   cursor: 'pointer'
                 }}
