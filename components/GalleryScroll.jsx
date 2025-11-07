@@ -230,9 +230,11 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       const velocityFactor = Math.min(scrollVelocity.current * 100, 500);
       const dynamicTimeout = 300 + velocityFactor;
 
-      // Set new timeout to snap after scrolling stops
+      // Set new timeout to snap after scrolling stops (desktop only)
       scrollTimeout.current = setTimeout(() => {
-        snapToNearest();
+        if (!isMobileNow) {
+          snapToNearest();
+        }
         setIsScrolling(false);
       }, dynamicTimeout);
     };
@@ -361,7 +363,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
                       src={gallery.image}
                       alt={gallery.title}
                       fill
-                      sizes="(max-width: 768px) 50vw, 33vw"
+                      sizes="(max-width: 768px) 30vw, 33vw"
                       style={{
                         objectFit: 'cover',
                         objectPosition: 'center'
