@@ -144,9 +144,9 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     return () => observer.disconnect();
   }, [mounted, galleries.length, isMobile]);
 
-  // Initialize parallax positions after component mounts and Intersection Observer has run
+  // Initialize parallax positions after component mounts and Intersection Observer has run (desktop only)
   useEffect(() => {
-    if (!mounted) return;
+    if (!mounted || isMobile) return;
 
     // Wait for Intersection Observer callbacks to complete
     const timer = setTimeout(() => {
@@ -156,7 +156,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     }, 250);
 
     return () => clearTimeout(timer);
-  }, [mounted]);
+  }, [mounted, isMobile]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -205,8 +205,10 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
         cancelAnimationFrame(rafId.current);
       }
 
-      // Update parallax on next frame
-      rafId.current = requestAnimationFrame(updateParallax);
+      // Update parallax on next frame (desktop only)
+      if (!isMobileNow) {
+        rafId.current = requestAnimationFrame(updateParallax);
+      }
 
       setIsScrolling(true);
 
