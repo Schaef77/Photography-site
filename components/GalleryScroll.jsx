@@ -118,7 +118,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       // Image wrapper is 150% width positioned at -30%
       // With 50% extra width on each side, we can move ±28% safely
       // This ensures continuous parallax across the entire viewport travel
-      const maxParallax = isMobile ? 4 : 28; // Very subtle parallax on mobile
+      const maxParallax = isMobile ? 0 : 28; // Disable parallax on mobile to prevent disappearing images
       const parallaxAmount = progress * maxParallax;
 
       // Use translate3d for better GPU acceleration
@@ -190,13 +190,25 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       lastScrollTime.current = currentTime;
       lastScrollLeft.current = currentScroll;
 
-      // Update current gallery index
+      // Update current gallery index based on which gallery is closest to viewport center
       const itemWidth = isMobile ? windowDimensions.current.width * 0.65 : windowDimensions.current.width * 0.25;
-      // Account for left padding when calculating which gallery is centered
-      const paddingOffset = isMobile ? windowDimensions.current.width * 0.20 : windowDimensions.current.width * 0.375;
-      const adjustedScroll = currentScroll + paddingOffset;
-      const newIndex = Math.round(adjustedScroll / itemWidth);
-      setCurrentGalleryIndex(newIndex);
+      const viewportCenter = windowDimensions.current.width / 2;
+      const paddingLeft = isMobile ? windowDimensions.current.width * 0.20 : windowDimensions.current.width * 0.375;
+
+      // Find which gallery center is closest to viewport center
+      let closestIndex = 0;
+      let minDistance = Infinity;
+
+      galleries.forEach((_, index) => {
+        const itemCenter = paddingLeft + (index * itemWidth) + (itemWidth / 2) - currentScroll;
+        const distance = Math.abs(itemCenter - viewportCenter);
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      setCurrentGalleryIndex(closestIndex);
 
       // Cancel any pending RAF to avoid duplicate updates
       if (rafId.current) {
