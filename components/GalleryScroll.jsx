@@ -143,7 +143,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       },
       {
         root: containerRef.current,
-        rootMargin: isMobile ? '0% 20% 0% 20%' : '50% 150% 50% 150%', // Very tight margin on mobile
+        rootMargin: isMobile ? '0% 0% 0% 0%' : '50% 150% 50% 150%', // Only visible galleries on mobile
         threshold: 0
       }
     );
