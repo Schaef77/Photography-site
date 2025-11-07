@@ -100,28 +100,18 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       const itemRight = itemLeft + itemWidth;
       const itemCenter = itemLeft + (itemWidth / 2);
 
-      let progress, parallaxAmount;
-
       if (isMobile) {
-        // Mobile: Simple parallax based on distance from viewport center
-        const viewportCenter = scrollLeft + (viewportWidth / 2);
-        const distanceFromCenter = itemCenter - viewportCenter;
-        // Normalize by half viewport width for smoother effect
-        const normalizedDistance = distanceFromCenter / (viewportWidth / 2);
-        // Clamp between -1 and 1
-        const clampedDistance = Math.max(-1, Math.min(1, normalizedDistance));
-        parallaxAmount = clampedDistance * 3; // 3% max movement
+        // Mobile: No parallax, just static positioning
+        imageWrapper.style.transform = 'translate3d(0, 0, 0)';
       } else {
         // Desktop: Original complex parallax calculation
         const viewportRight = scrollLeft + viewportWidth;
         const totalTravel = viewportWidth + itemWidth;
         const currentTravel = viewportRight - itemRight;
-        progress = (currentTravel / totalTravel) * 2 - 1;
-        parallaxAmount = progress * 28;
+        const progress = (currentTravel / totalTravel) * 2 - 1;
+        const parallaxAmount = progress * 28;
+        imageWrapper.style.transform = `translate3d(${parallaxAmount}%, 0, 0)`;
       }
-
-      // Use translate3d for better GPU acceleration
-      imageWrapper.style.transform = `translate3d(${parallaxAmount}%, 0, 0)`;
     });
   };
 
@@ -351,8 +341,8 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
                     style={{
                       position: 'absolute',
                       top: 0,
-                      left: '-30%',
-                      width: '150%',
+                      left: isMobile ? '-10%' : '-30%',
+                      width: isMobile ? '120%' : '150%',
                       height: '100%',
                       willChange: 'transform',
                       transform: 'translate3d(0, 0, 0)'
