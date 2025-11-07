@@ -70,7 +70,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
 
     // Wait for component to be fully mounted and visible
     const scrollTimeout = setTimeout(() => {
-      const itemWidth = isMobile ? window.innerWidth * 0.85 : window.innerWidth * 0.25;
+      const itemWidth = isMobile ? window.innerWidth * 0.65 : window.innerWidth * 0.25;
       const targetScroll = galleryIndex * itemWidth;
       container.scrollLeft = targetScroll;
       hasScrolledToInitial.current = true;
@@ -88,7 +88,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     const scrollLeft = container.scrollLeft;
     scrollLeftRef.current = scrollLeft;
 
-    const itemWidth = isMobile ? windowDimensions.current.width * 0.85 : windowDimensions.current.width * 0.25;
+    const itemWidth = isMobile ? windowDimensions.current.width * 0.65 : windowDimensions.current.width * 0.25;
     const viewportWidth = windowDimensions.current.width;
 
     // Only update visible galleries
@@ -118,7 +118,8 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       // Image wrapper is 150% width positioned at -30%
       // With 50% extra width on each side, we can move ±28% safely
       // This ensures continuous parallax across the entire viewport travel
-      const parallaxAmount = progress * 28; // -28% to +28% range
+      const maxParallax = isMobile ? 15 : 28; // Reduce parallax on mobile
+      const parallaxAmount = progress * maxParallax;
 
       // Use translate3d for better GPU acceleration
       imageWrapper.style.transform = `translate3d(${parallaxAmount}%, 0, 0)`;
@@ -142,7 +143,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       },
       {
         root: containerRef.current,
-        rootMargin: '50% 150% 50% 150%', // Extended margin for smoother transitions
+        rootMargin: isMobile ? '0% 50% 0% 50%' : '50% 150% 50% 150%', // Tighter margin on mobile
         threshold: 0
       }
     );
@@ -152,7 +153,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     });
 
     return () => observer.disconnect();
-  }, [mounted, galleries.length]);
+  }, [mounted, galleries.length, isMobile]);
 
   // Initialize parallax positions after component mounts and Intersection Observer has run
   useEffect(() => {
@@ -190,7 +191,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       lastScrollLeft.current = currentScroll;
 
       // Update current gallery index
-      const itemWidth = isMobile ? windowDimensions.current.width * 0.85 : windowDimensions.current.width * 0.25;
+      const itemWidth = isMobile ? windowDimensions.current.width * 0.65 : windowDimensions.current.width * 0.25;
       const newIndex = Math.round(currentScroll / itemWidth);
       setCurrentGalleryIndex(newIndex);
 
@@ -221,7 +222,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     };
 
     const snapToNearest = () => {
-      const itemWidth = isMobile ? windowDimensions.current.width * 0.85 : windowDimensions.current.width * 0.25;
+      const itemWidth = isMobile ? windowDimensions.current.width * 0.65 : windowDimensions.current.width * 0.25;
       const currentScroll = container.scrollLeft;
       const nearestIndex = Math.round(currentScroll / itemWidth);
       const targetScroll = nearestIndex * itemWidth;
@@ -301,8 +302,8 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
             display: 'flex',
             alignItems: 'flex-start',
             height: '100%',
-            paddingLeft: isMobile ? '7.5vw' : '37.5vw',
-            width: isMobile ? `${galleries.length * 85 + 15}vw` : `${galleries.length * 25 + 75}vw`
+            paddingLeft: isMobile ? '20vw' : '37.5vw',
+            width: isMobile ? `${galleries.length * 65 + 40}vw` : `${galleries.length * 25 + 75}vw`
           }}
         >
           {galleries.map((gallery, index) => {
@@ -314,7 +315,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
                 onClick={() => router.push(`/gallery/${gallery.id}`)}
                 style={{
                   flexShrink: 0,
-                  width: isMobile ? '85vw' : '25vw',
+                  width: isMobile ? '65vw' : '25vw',
                   paddingTop: isMobile ? '2vh' : '1.5vw',
                   cursor: 'pointer'
                 }}
@@ -322,8 +323,8 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
                 <div
                   style={{
                     position: 'relative',
-                    width: isMobile ? '80vw' : '22vw',
-                    height: isMobile ? '75vh' : '60vh',
+                    width: isMobile ? '60vw' : '22vw',
+                    height: isMobile ? '56vh' : '60vh',
                     overflow: 'hidden',
                     margin: '0 auto'
                   }}
@@ -383,10 +384,10 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       </div>
 
       {/* Animated Counter */}
-      <div style={{ 
-        position: 'fixed', 
-        bottom: '40px', 
-        left: '50%', 
+      <div style={{
+        position: 'fixed',
+        bottom: isMobile ? 'calc(100vh - 100px - 56vh - 2vh - 60px)' : '40px',
+        left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 9999,
         display: 'flex',
