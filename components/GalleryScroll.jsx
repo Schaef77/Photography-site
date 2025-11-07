@@ -100,15 +100,18 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       const itemRight = itemLeft + itemWidth;
       const itemCenter = itemLeft + (itemWidth / 2);
 
-      // Calculate parallax effect
-      const viewportRight = scrollLeft + viewportWidth;
-      const totalTravel = viewportWidth + itemWidth;
-      const currentTravel = viewportRight - itemRight;
-      const progress = (currentTravel / totalTravel) * 2 - 1;
-
-      // Use smaller parallax amount on mobile (5% vs 28% on desktop)
-      const parallaxAmount = progress * (isMobile ? 5 : 28);
-      imageWrapper.style.transform = `translate3d(${parallaxAmount}%, 0, 0)`;
+      if (isMobile) {
+        // Mobile: No parallax, just static positioning
+        imageWrapper.style.transform = 'translate3d(0, 0, 0)';
+      } else {
+        // Desktop: Original complex parallax calculation
+        const viewportRight = scrollLeft + viewportWidth;
+        const totalTravel = viewportWidth + itemWidth;
+        const currentTravel = viewportRight - itemRight;
+        const progress = (currentTravel / totalTravel) * 2 - 1;
+        const parallaxAmount = progress * 28;
+        imageWrapper.style.transform = `translate3d(${parallaxAmount}%, 0, 0)`;
+      }
     });
   };
 
@@ -141,9 +144,9 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     return () => observer.disconnect();
   }, [mounted, galleries.length, isMobile]);
 
-  // Initialize parallax positions after component mounts and Intersection Observer has run
+  // Initialize parallax positions after component mounts and Intersection Observer has run (desktop only)
   useEffect(() => {
-    if (!mounted) return;
+    if (!mounted || isMobile) return;
 
     // Wait for Intersection Observer callbacks to complete
     const timer = setTimeout(() => {
@@ -153,7 +156,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     }, 250);
 
     return () => clearTimeout(timer);
-  }, [mounted]);
+  }, [mounted, isMobile]);
 
   useEffect(() => {
     const container = containerRef.current;
@@ -202,8 +205,10 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
         cancelAnimationFrame(rafId.current);
       }
 
-      // Update parallax on next frame
-      rafId.current = requestAnimationFrame(updateParallax);
+      // Update parallax on next frame (desktop only)
+      if (!isMobileNow) {
+        rafId.current = requestAnimationFrame(updateParallax);
+      }
 
       setIsScrolling(true);
 
