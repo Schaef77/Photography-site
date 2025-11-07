@@ -119,7 +119,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       // With 50% extra width on each side, we can move ±28% safely
       // This ensures continuous parallax across the entire viewport travel
       const maxParallax = isMobile ? 5 : 28; // Balanced for mobile - enough movement without leaving frame
-      const parallaxAmount = progress * maxParallax;
+      const parallaxAmount = isMobile ? -(progress * maxParallax) : (progress * maxParallax); // Invert direction on mobile
 
       // Use translate3d for better GPU acceleration
       imageWrapper.style.transform = `translate3d(${parallaxAmount}%, 0, 0)`;
