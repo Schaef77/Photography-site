@@ -23,6 +23,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
   const windowDimensions = useRef({ width: 0, height: 0 });
   const visibleIndices = useRef(new Set());
   const hasScrolledToInitial = useRef(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Cache window dimensions and update on resize
   useEffect(() => {
@@ -33,6 +34,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
         width: window.innerWidth,
         height: window.innerHeight
       };
+      setIsMobile(window.innerWidth < 768);
     };
 
     updateDimensions();
@@ -68,7 +70,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
 
     // Wait for component to be fully mounted and visible
     const scrollTimeout = setTimeout(() => {
-      const itemWidth = window.innerWidth * 0.25;
+      const itemWidth = isMobile ? window.innerWidth * 0.85 : window.innerWidth * 0.25;
       const targetScroll = galleryIndex * itemWidth;
       container.scrollLeft = targetScroll;
       hasScrolledToInitial.current = true;
@@ -76,7 +78,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     }, 100);
 
     return () => clearTimeout(scrollTimeout);
-  }, [initialGalleryId, mounted, galleries]);
+  }, [initialGalleryId, mounted, galleries, isMobile]);
 
   // Optimized parallax update function
   const updateParallax = () => {
@@ -86,7 +88,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     const scrollLeft = container.scrollLeft;
     scrollLeftRef.current = scrollLeft;
 
-    const itemWidth = windowDimensions.current.width * 0.25;
+    const itemWidth = isMobile ? windowDimensions.current.width * 0.85 : windowDimensions.current.width * 0.25;
     const viewportWidth = windowDimensions.current.width;
 
     // Only update visible galleries
@@ -188,7 +190,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
       lastScrollLeft.current = currentScroll;
 
       // Update current gallery index
-      const itemWidth = windowDimensions.current.width * 0.25;
+      const itemWidth = isMobile ? windowDimensions.current.width * 0.85 : windowDimensions.current.width * 0.25;
       const newIndex = Math.round(currentScroll / itemWidth);
       setCurrentGalleryIndex(newIndex);
 
@@ -219,7 +221,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     };
 
     const snapToNearest = () => {
-      const itemWidth = windowDimensions.current.width * 0.25;
+      const itemWidth = isMobile ? windowDimensions.current.width * 0.85 : windowDimensions.current.width * 0.25;
       const currentScroll = container.scrollLeft;
       const nearestIndex = Math.round(currentScroll / itemWidth);
       const targetScroll = nearestIndex * itemWidth;
@@ -279,7 +281,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
     <div
       className="fixed top-0 left-0 w-screen h-screen overflow-hidden"
       style={{
-        paddingTop: '145px',
+        paddingTop: isMobile ? '100px' : '145px',
         opacity: isVisible ? 1 : 0,
         transition: 'opacity 600ms ease-out',
         backgroundColor: '#141414'
@@ -294,13 +296,13 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
   WebkitOverflowScrolling: 'touch'
 }}
       >
-        <div 
-          style={{ 
+        <div
+          style={{
             display: 'flex',
             alignItems: 'flex-start',
             height: '100%',
-            paddingLeft: '37.5vw',
-            width: `${galleries.length * 25 + 75}vw`
+            paddingLeft: isMobile ? '7.5vw' : '37.5vw',
+            width: isMobile ? `${galleries.length * 85 + 15}vw` : `${galleries.length * 25 + 75}vw`
           }}
         >
           {galleries.map((gallery, index) => {
@@ -312,16 +314,16 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
                 onClick={() => router.push(`/gallery/${gallery.id}`)}
                 style={{
                   flexShrink: 0,
-                  width: '25vw',
-                  paddingTop: '1.5vw',
+                  width: isMobile ? '85vw' : '25vw',
+                  paddingTop: isMobile ? '2vh' : '1.5vw',
                   cursor: 'pointer'
                 }}
               >
                 <div
                   style={{
                     position: 'relative',
-                    width: '22vw',
-                    height: '60vh',
+                    width: isMobile ? '80vw' : '22vw',
+                    height: isMobile ? '75vh' : '60vh',
                     overflow: 'hidden',
                     margin: '0 auto'
                   }}
@@ -363,7 +365,7 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
                     }}
                   >
                    <h2 style={{
-  fontSize: '22px',
+  fontSize: isMobile ? '18px' : '22px',
   fontWeight: 500,
   color: 'white',
   margin: 0,

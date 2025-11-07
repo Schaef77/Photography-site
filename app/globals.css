@@ -132,6 +132,14 @@ html, body {
   right: 25px !important;
 }
 
+/* Hide navigation arrows on mobile (phone-sized screens) */
+@media (max-width: 767px) {
+  .yarl__navigation_prev,
+  .yarl__navigation_next {
+    display: none !important;
+  }
+}
+
 /* Pop animation for all interactive buttons and links */
 a, button {
   transition: transform 0.2s ease, color 0.3s ease;
