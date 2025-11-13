@@ -18,6 +18,9 @@ interface Photo {
   src: string;
   width: number;
   height: number;
+  groupId?: string;
+  isFirstInGroup?: boolean;
+  isNewGroup?: boolean;
 }
 
 interface Gallery {
@@ -33,17 +36,27 @@ export default function GalleryClient({ gallery }: { gallery: Gallery }) {
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
   // Convert photos to masonry format with scaled dimensions from build-time data
-  const masonryItems = gallery.photos.map((photo, index) => {
+  const masonryItems: any[] = [];
+
+  gallery.photos.forEach((photo, index) => {
+    // Add divider before new groups
+    if (photo.isNewGroup) {
+      masonryItems.push({
+        id: `divider-${photo.groupId}`,
+        isDivider: true,
+      });
+    }
+
     // Use dimensions from galleries.json (extracted at build time)
     const aspectRatio = photo.height / photo.width;
     // Scale proportionally - portrait photos taller, landscape shorter
     const scaledHeight = 500 * aspectRatio;
 
-    return {
+    masonryItems.push({
       id: `${gallery.id}-${index}`,
       img: photo.src,
       height: scaledHeight,
-    };
+    });
   });
 
   const handleImageClick = (item: any) => {

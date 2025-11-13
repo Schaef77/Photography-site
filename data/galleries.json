@@ -1,5 +1,424 @@
 [
   {
+    "id": "portraits",
+    "title": "Portraits",
+    "thumbnail": "/images/galleries/portraits/portraits_cover.jpg",
+    "thumbnailWidth": 1000,
+    "thumbnailHeight": 1500,
+    "photos": [
+      {
+        "src": "/images/galleries/portraits/clayton-1.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "clayton",
+        "isFirstInGroup": true,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/portraits/clayton-2.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "clayton",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/portraits/clayton-3.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "clayton",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/portraits/elina-1.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "elina",
+        "isFirstInGroup": true,
+        "isNewGroup": true
+      },
+      {
+        "src": "/images/galleries/portraits/elina-2.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "elina",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/portraits/elina-3.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "elina",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/portraits/elina-4.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "elina",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      }
+    ]
+  },
+  {
+    "id": "spencer-peak",
+    "title": "Spencer Peak",
+    "thumbnail": "/images/galleries/spencer-peak/spencer-peak_cover.jpg",
+    "thumbnailWidth": 1500,
+    "thumbnailHeight": 1000,
+    "photos": [
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-1.jpg",
+        "width": 2000,
+        "height": 2000,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": true,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-10.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-11.jpg",
+        "width": 1521,
+        "height": 2000,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-12.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-13.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-14.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-15.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-16.jpg",
+        "width": 2000,
+        "height": 2000,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-17.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-18.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-19.jpg",
+        "width": 2000,
+        "height": 1126,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-2.jpg",
+        "width": 2000,
+        "height": 1500,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-20.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-21.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-22.jpg",
+        "width": 2000,
+        "height": 1126,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-23.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-3.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-4.jpg",
+        "width": 2000,
+        "height": 1500,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-5.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-6.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-7.jpg",
+        "width": 2000,
+        "height": 1229,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-8.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/spencer-peak/spencer-peak-9.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "spencer-peak",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      }
+    ]
+  },
+  {
+    "id": "sports",
+    "title": "Sports",
+    "thumbnail": "/images/galleries/sports/sports_cover.jpg",
+    "thumbnailWidth": 1000,
+    "thumbnailHeight": 1500,
+    "photos": [
+      {
+        "src": "/images/galleries/sports/anthony-bh-1.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": true,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-10.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-11.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-12.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-13.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-14.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-15.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-16.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-17.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-18.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-19.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-2.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-3.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-4.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-5.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-6.jpg",
+        "width": 2000,
+        "height": 1333,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-7.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-8.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      },
+      {
+        "src": "/images/galleries/sports/anthony-bh-9.jpg",
+        "width": 1333,
+        "height": 2000,
+        "groupId": "anthony-bh",
+        "isFirstInGroup": false,
+        "isNewGroup": false
+      }
+    ]
+  },
+  {
     "id": "saint-marks-summit",
     "title": "Saint Marks Summit",
     "thumbnail": "/images/galleries/saint-marks-summit/saint-marks-summit_cover.jpg",
@@ -9,72 +428,114 @@
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-1.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": true,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-10.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-11.jpg",
         "width": 2000,
-        "height": 1449
+        "height": 1449,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-12.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-13.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-14.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-2.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-3.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-4.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-5.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-6.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-7.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-8.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/saint-marks-summit/saint-marks-summit-9.jpg",
         "width": 2000,
-        "height": 1452
+        "height": 1452,
+        "groupId": "saint-marks-summit",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       }
     ]
   },
@@ -88,262 +549,418 @@
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-1.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": true,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-10.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-11.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-12.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-13.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-14.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-15.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-16.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-17.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-18.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-19.jpg",
         "width": 1767,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-2.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-20.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-21.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-22.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-23.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-24.jpg",
         "width": 1562,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-25.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-26.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-27.jpg",
         "width": 1299,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-28.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-29.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-3.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-30.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-31.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-32.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-33.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-34.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-35.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-36.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-37.jpg",
         "width": 2000,
-        "height": 1132
+        "height": 1132,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-38.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-39.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-4.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-40.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-41.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-42.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-43.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-44.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-45.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-46.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-47.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-48.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-49.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-5.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-50.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-51.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-52.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-6.jpg",
         "width": 2000,
-        "height": 1126
+        "height": 1126,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-7.jpg",
         "width": 2000,
-        "height": 1955
+        "height": 1955,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-8.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/glacier-national-park/glacier-national-park-9.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "glacier-national-park",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       }
     ]
   },
@@ -357,57 +974,90 @@
       {
         "src": "/images/galleries/a-walk-downtown/a-walk-downtown-1.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "a-walk-downtown",
+        "isFirstInGroup": true,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/a-walk-downtown/a-walk-downtown-10.jpg",
         "width": 1554,
-        "height": 2000
+        "height": 2000,
+        "groupId": "a-walk-downtown",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/a-walk-downtown/a-walk-downtown-11.jpg",
         "width": 1434,
-        "height": 2000
+        "height": 2000,
+        "groupId": "a-walk-downtown",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/a-walk-downtown/a-walk-downtown-2.jpg",
         "width": 1461,
-        "height": 2000
+        "height": 2000,
+        "groupId": "a-walk-downtown",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/a-walk-downtown/a-walk-downtown-3.jpg",
         "width": 1315,
-        "height": 2000
+        "height": 2000,
+        "groupId": "a-walk-downtown",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/a-walk-downtown/a-walk-downtown-4.jpg",
         "width": 1491,
-        "height": 2000
+        "height": 2000,
+        "groupId": "a-walk-downtown",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/a-walk-downtown/a-walk-downtown-5.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "a-walk-downtown",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/a-walk-downtown/a-walk-downtown-6.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "a-walk-downtown",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/a-walk-downtown/a-walk-downtown-7.jpg",
         "width": 1391,
-        "height": 2000
+        "height": 2000,
+        "groupId": "a-walk-downtown",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/a-walk-downtown/a-walk-downtown-8.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "a-walk-downtown",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/a-walk-downtown/a-walk-downtown-9.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "a-walk-downtown",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       }
     ]
   },
@@ -421,222 +1071,354 @@
       {
         "src": "/images/galleries/iceland/iceland-1.jpg",
         "width": 1629,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": true,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-10.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-11.jpg",
         "width": 1654,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-12.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-13.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-14.jpg",
         "width": 2000,
-        "height": 1233
+        "height": 1233,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-15.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-16.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-17.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-18.jpg",
         "width": 1757,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-19.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-2.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-20.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-21.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-22.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-23.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-24.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-25.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-26.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-27.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-28.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-29.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-3.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-30.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-31.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-32.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-33.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-34.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-35.jpg",
         "width": 2000,
-        "height": 1368
+        "height": 1368,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-36.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-37.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-38.jpg",
         "width": 2000,
-        "height": 1482
+        "height": 1482,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-39.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-4.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-40.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-41.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-42.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-43.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-44.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-5.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-6.jpg",
         "width": 2000,
-        "height": 1394
+        "height": 1394,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-7.jpg",
         "width": 2000,
-        "height": 1500
+        "height": 1500,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-8.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/iceland/iceland-9.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "iceland",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       }
     ]
   },
@@ -650,117 +1432,186 @@
       {
         "src": "/images/galleries/milan/milan-1.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "milan",
+        "isFirstInGroup": true,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-10.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-11.jpg",
         "width": 1312,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-12.jpg",
         "width": 1300,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-13.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-14.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-15.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-16.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-17.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-18.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-19.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-2.jpg",
         "width": 2000,
-        "height": 1227
+        "height": 1227,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-20.jpg",
         "width": 1327,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-21.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-22.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-23.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-3.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-4.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-5.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-6.jpg",
         "width": 2000,
-        "height": 867
+        "height": 867,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-7.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-8.jpg",
         "width": 1457,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/milan/milan-9.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "milan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       }
     ]
   },
@@ -774,197 +1625,314 @@
       {
         "src": "/images/galleries/nice/nice-1.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": true,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-10.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-11.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-12.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-13.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-14.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-15.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-16.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-17.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-18.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-19.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-2.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-20.jpg",
         "width": 2000,
-        "height": 1784
+        "height": 1784,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-21.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-22.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-23.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-24.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-25.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-26.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-27.jpg",
         "width": 1672,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-28.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-29.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-3.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-30.jpg",
         "width": 2000,
-        "height": 1803
+        "height": 1803,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-31.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-32.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-33.jpg",
         "width": 2000,
-        "height": 1451
+        "height": 1451,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-34.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-35.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-36.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-37.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-38.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-39.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-4.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-5.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-6.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-7.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-8.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/nice/nice-9.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "nice",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       }
     ]
   },
@@ -978,67 +1946,106 @@
       {
         "src": "/images/galleries/perpignan/perpignan-1.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "perpignan",
+        "isFirstInGroup": true,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/perpignan/perpignan-10.jpg",
         "width": 1502,
-        "height": 2000
+        "height": 2000,
+        "groupId": "perpignan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/perpignan/perpignan-11.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "perpignan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/perpignan/perpignan-12.jpg",
         "width": 1534,
-        "height": 2000
+        "height": 2000,
+        "groupId": "perpignan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/perpignan/perpignan-13.jpg",
         "width": 1577,
-        "height": 2000
+        "height": 2000,
+        "groupId": "perpignan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/perpignan/perpignan-2.jpg",
         "width": 1905,
-        "height": 2000
+        "height": 2000,
+        "groupId": "perpignan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/perpignan/perpignan-3.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "perpignan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/perpignan/perpignan-4.jpg",
         "width": 1662,
-        "height": 2000
+        "height": 2000,
+        "groupId": "perpignan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/perpignan/perpignan-5.jpg",
         "width": 2000,
-        "height": 1873
+        "height": 1873,
+        "groupId": "perpignan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/perpignan/perpignan-6.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "perpignan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/perpignan/perpignan-7.jpg",
         "width": 1573,
-        "height": 2000
+        "height": 2000,
+        "groupId": "perpignan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/perpignan/perpignan-8.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "perpignan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/perpignan/perpignan-9.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "perpignan",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       }
     ]
   },
@@ -1052,132 +2059,210 @@
       {
         "src": "/images/galleries/amsterdam/amsterdam-1.jpg",
         "width": 2000,
-        "height": 1294
+        "height": 1294,
+        "groupId": "amsterdam",
+        "isFirstInGroup": true,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-10.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-11.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-12.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-13.jpg",
         "width": 1449,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-14.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-15.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-16.jpg",
         "width": 2000,
-        "height": 1250
+        "height": 1250,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-17.jpg",
         "width": 1494,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-18.jpg",
         "width": 1692,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-19.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-2.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-20.jpg",
         "width": 2000,
-        "height": 1150
+        "height": 1150,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-21.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-22.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-23.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-24.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-25.jpg",
         "width": 2000,
-        "height": 1207
+        "height": 1207,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-26.jpg",
         "width": 1520,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-3.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-4.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-5.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-6.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-7.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-8.jpg",
         "width": 2000,
-        "height": 1333
+        "height": 1333,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       },
       {
         "src": "/images/galleries/amsterdam/amsterdam-9.jpg",
         "width": 1333,
-        "height": 2000
+        "height": 2000,
+        "groupId": "amsterdam",
+        "isFirstInGroup": false,
+        "isNewGroup": false
       }
     ]
   }

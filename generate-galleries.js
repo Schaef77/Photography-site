@@ -2,18 +2,6 @@ const fs = require('fs');
 const path = require('path');
 const { imageSize } = require('image-size');
 
-// Gallery order from newest to oldest
-const galleryOrder = [
-  'saint-marks-summit',
-  'glacier-national-park',
-  'a-walk-downtown',
-  'iceland',
-  'milan',
-  'nice',
-  'perpignan',
-  'amsterdam'
-];
-
 // Convert folder name to display title
 function formatTitle(folderName) {
   return folderName
@@ -37,10 +25,59 @@ function getImageDimensions(imagePath) {
   }
 }
 
+// Load gallery order from config file
+function loadGalleryOrder() {
+  const orderFilePath = path.join(__dirname, 'gallery-order.json');
+
+  // If config file exists, use it
+  if (fs.existsSync(orderFilePath)) {
+    try {
+      const orderData = fs.readFileSync(orderFilePath, 'utf8');
+      return JSON.parse(orderData);
+    } catch (error) {
+      console.error('⚠️  Error reading gallery-order.json, discovering galleries automatically');
+      return null;
+    }
+  }
+
+  return null;
+}
+
+// Auto-discover galleries if not in order file
+function discoverGalleries(galleriesPath, specifiedOrder) {
+  const allFolders = fs.readdirSync(galleriesPath)
+    .filter(item => {
+      const itemPath = path.join(galleriesPath, item);
+      return fs.statSync(itemPath).isDirectory() && !item.startsWith('.');
+    });
+
+  // Find any galleries not in the order file
+  const unspecifiedGalleries = allFolders.filter(folder => !specifiedOrder.includes(folder));
+
+  if (unspecifiedGalleries.length > 0) {
+    console.log(`\n⚠️  Found ${unspecifiedGalleries.length} gallery(ies) not in gallery-order.json:`);
+    unspecifiedGalleries.forEach(g => console.log(`   - ${g}`));
+    console.log('   Add them to gallery-order.json to include them\n');
+  }
+
+  return unspecifiedGalleries;
+}
+
 // Generate galleries data
 function generateGalleries() {
   const galleriesPath = path.join(__dirname, 'public', 'images', 'galleries');
   const galleries = [];
+
+  // Load gallery order from config
+  const galleryOrder = loadGalleryOrder();
+
+  if (!galleryOrder) {
+    console.log('⚠️  No gallery-order.json found, please create one');
+    return galleries;
+  }
+
+  // Check for galleries not in the order file
+  discoverGalleries(galleriesPath, galleryOrder);
 
   galleryOrder.forEach(folderName => {
     const galleryPath = path.join(galleriesPath, folderName);
@@ -70,21 +107,51 @@ function generateGalleries() {
     const coverDimensions = getImageDimensions(coverPath);
 
     // Get all photos except cover with dimensions
-    const photos = files
+    const photoFiles = files
       .filter(file =>
         !file.toLowerCase().includes('_cover') &&
         !file.startsWith('.') &&
         (file.endsWith('.jpg') || file.endsWith('.jpeg') || file.endsWith('.png'))
-      )
-      .map(file => {
+      );
+
+    // Group photos by prefix (everything before the last hyphen and number)
+    const photoGroups = {};
+    photoFiles.forEach(file => {
+      // Remove file extension first
+      const nameWithoutExt = file.replace(/\.(jpg|jpeg|png)$/i, '');
+      // Split by hyphen and remove the last part if it's a number
+      const parts = nameWithoutExt.split('-');
+      let prefix = nameWithoutExt;
+
+      // If last part is a number, use everything before it as the group
+      if (parts.length > 1 && /^\d+$/.test(parts[parts.length - 1])) {
+        prefix = parts.slice(0, -1).join('-');
+      }
+
+      if (!photoGroups[prefix]) {
+        photoGroups[prefix] = [];
+      }
+      photoGroups[prefix].push(file);
+    });
+
+    // Build photo array with group markers
+    const photos = [];
+    const groupPrefixes = Object.keys(photoGroups).sort();
+
+    groupPrefixes.forEach((prefix, groupIndex) => {
+      photoGroups[prefix].forEach((file, fileIndex) => {
         const fullPath = path.join(galleryPath, file);
         const dimensions = getImageDimensions(fullPath);
-        return {
+        photos.push({
           src: `/images/galleries/${folderName}/${file}`,
           width: dimensions.width,
-          height: dimensions.height
-        };
+          height: dimensions.height,
+          groupId: prefix,
+          isFirstInGroup: fileIndex === 0,
+          isNewGroup: groupIndex > 0 && fileIndex === 0
+        });
       });
+    });
 
     galleries.push({
       id: folderName,

@@ -64,6 +64,17 @@ export default function Masonry({
     const columnWidth = width / columns;
 
     const gridItems = items.map(child => {
+      // Handle dividers - span full width
+      if (child.isDivider) {
+        const maxHeight = Math.max(...colHeights);
+        // Reset all columns to same height for divider
+        colHeights.fill(maxHeight);
+        const y = maxHeight + 40; // Add spacing before divider
+        colHeights.fill(y + 60); // Add divider height + spacing after
+
+        return { ...child, x: 0, y, w: width, h: 1, isDivider: true };
+      }
+
       const col = colHeights.indexOf(Math.min(...colHeights));
       const x = columnWidth * col;
       const height = child.height / 2;
@@ -138,6 +149,26 @@ export default function Masonry({
       }}
     >
       {grid.items.map((item, index) => {
+        // Render divider
+        if (item.isDivider) {
+          return (
+            <div
+              key={item.id}
+              data-key={item.id}
+              className="masonry-divider"
+              style={{
+                transform: `translate3d(${item.x}px, ${item.y}px, 0)`,
+                width: `${item.w}px`,
+                height: '1px',
+                backgroundColor: '#c9a961',
+                opacity: 0.3,
+                position: 'absolute'
+              }}
+            />
+          );
+        }
+
+        // Render image
         return (
           <div
             key={item.id}
