@@ -1,43 +1,38 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import Lightbox from 'yet-another-react-lightbox';
+import dynamic from 'next/dynamic';
+
+// Dynamically import Lightbox to reduce initial bundle size
+const Lightbox = dynamic(() => import('yet-another-react-lightbox'), {
+  ssr: false,
+  loading: () => null
+});
+
+// Import styles separately to ensure they load
 import 'yet-another-react-lightbox/styles.css';
 
-export default function FeaturedGallery() {
+export default function FeaturedGallery({ images }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
-  const [featuredImages, setFeaturedImages] = useState([]);
-
-  // Auto-discover images from /public/images/featured/ folder
-  useEffect(() => {
-    const fetchFeaturedImages = async () => {
-      try {
-        const response = await fetch('/api/featured-images');
-        const images = await response.json();
-        setFeaturedImages(images);
-      } catch (error) {
-        console.error('Error loading featured images:', error);
-      }
-    };
-    fetchFeaturedImages();
-  }, []);
 
   // Create grid items with deterministic sizing (using index-based pattern)
   const gridItems = useMemo(() => {
     // Use a deterministic pattern: every 3rd and 4th image is large
-    return featuredImages.map((src, index) => ({
-      src,
+    return images.map((img, index) => ({
+      ...img,
       isLarge: index % 7 === 2 || index % 7 === 5 // Deterministic pattern for ~30% large images
     }));
-  }, [featuredImages]);
+  }, [images]);
 
   // Prepare lightbox slides
-  const slides = featuredImages.map((src) => ({
-    src,
-    alt: 'Adrian Schaefer Photography'
+  const slides = images.map((img) => ({
+    src: img.src,
+    alt: 'Adrian Schaefer Photography',
+    width: img.width,
+    height: img.height
   }));
 
   const handleImageClick = (index) => {

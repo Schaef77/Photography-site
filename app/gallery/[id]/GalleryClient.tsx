@@ -2,11 +2,17 @@
 
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import Lightbox from 'yet-another-react-lightbox';
+import dynamic from 'next/dynamic';
 import 'yet-another-react-lightbox/styles.css';
 import Navbar from '../../../components/Navbar';
 import Masonry from '../../../components/Masonry';
 import Footer from '../../../components/Footer';
+
+// Dynamically import Lightbox to reduce initial bundle size
+const Lightbox = dynamic(() => import('yet-another-react-lightbox'), {
+  ssr: false,
+  loading: () => null
+});
 
 interface Photo {
   src: string;

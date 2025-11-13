@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node generate-galleries.js",
+    "prebuild": "node generate-galleries.js && node generate-featured-images.js",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

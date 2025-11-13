@@ -41,19 +41,6 @@ const useMeasure = () => {
   return [ref, size];
 };
 
-const preloadImages = async urls => {
-  await Promise.all(
-    urls.map(
-      src =>
-        new Promise(resolve => {
-          const img = window.Image ? new window.Image() : document.createElement('img');
-          img.src = src;
-          img.onload = img.onerror = () => resolve();
-        })
-    )
-  );
-};
-
 export default function Masonry({
   items,
   stagger = 0.03,
@@ -68,12 +55,7 @@ export default function Masonry({
   );
 
   const [containerRef, { width }] = useMeasure();
-  const [imagesReady, setImagesReady] = useState(false);
   const hasAnimatedRef = useRef(false);
-
-  useEffect(() => {
-    preloadImages(items.map(i => i.img)).then(() => setImagesReady(true));
-  }, [items]);
 
   const grid = useMemo(() => {
     if (!width) return { items: [], height: 0 };
@@ -100,7 +82,7 @@ export default function Masonry({
 
   // Only animate ONCE on initial load
   useLayoutEffect(() => {
-    if (!imagesReady || hasAnimatedRef.current) return;
+    if (hasAnimatedRef.current || grid.items.length === 0) return;
 
     grid.items.forEach((item, index) => {
       const selector = `[data-key="${item.id}"]`;
@@ -121,7 +103,7 @@ export default function Masonry({
     });
 
     hasAnimatedRef.current = true;
-  }, [grid.items, imagesReady, stagger]);
+  }, [grid.items, stagger]);
 
   const handleMouseEnter = (e, item) => {
     const selector = `[data-key="${item.id}"]`;
@@ -155,7 +137,7 @@ export default function Masonry({
         height: grid.height > 0 ? `${grid.height}px` : 'auto'
       }}
     >
-      {grid.items.map(item => {
+      {grid.items.map((item, index) => {
         return (
           <div
             key={item.id}
@@ -180,6 +162,8 @@ export default function Masonry({
                 style={{
                   objectFit: 'cover'
                 }}
+                loading={index < 6 ? 'eager' : 'lazy'}
+                priority={index < 3}
               />
             </div>
           </div>

@@ -1,20 +1,9 @@
-'use client';
-
-import { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import FadeInWrapper from '../../components/FadeInWrapper';
+import AboutContent from '../../components/AboutContent';
 
 export default function About() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const fadeInTimeout = setTimeout(() => {
-      setIsVisible(true);
-    }, 50);
-
-    return () => clearTimeout(fadeInTimeout);
-  }, []);
-
   const sections = [
     {
       image: '/images/about-shot/suitshot.JPG',
@@ -44,119 +33,17 @@ export default function About() {
   ];
 
   return (
-    <div
-      className="min-h-screen"
-      style={{
-        opacity: isVisible ? 1 : 0,
-        transition: 'opacity 600ms ease-out',
-        backgroundColor: '#141414'
-      }}
-    >
-      <Navbar />
-
-      <style jsx>{`
-        .about-container {
-          padding-top: 90px;
-          padding-bottom: 80px;
-          max-width: 1200px;
-          margin: 0 auto;
-          padding-left: 32px;
-          padding-right: 32px;
-        }
-
-        @media (max-width: 768px) {
-          .about-container {
-            padding-top: 120px;
-          }
-        }
-
-        .about-title {
-          color: white;
-          font-size: 3rem;
-          font-weight: 500;
-          margin-bottom: 4rem;
-          text-align: center;
-          font-family: 'Montserrat', sans-serif;
-        }
-
-        .section-grid {
-          display: grid;
-          grid-template-columns: 1fr;
-          gap: 2rem;
-          align-items: center;
-          margin-bottom: 4rem;
-        }
-
-        @media (min-width: 768px) {
-          .section-grid {
-            grid-template-columns: 1fr 1fr;
-          }
-
-          .image-right {
-            order: 2;
-          }
-
-          .text-right {
-            order: 1;
-          }
-        }
-
-        .image-container {
-          width: 100%;
-          height: 350px;
-          overflow: hidden;
-        }
-
-        .image-container img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-        }
-
-        .text-container p {
-          color: white;
-          font-size: 1.125rem;
-          line-height: 1.8;
-          font-family: 'Montserrat', sans-serif;
-        }
-      `}</style>
-
-      <div className="about-container">
-        <h1 className="about-title">About</h1>
-
-        {sections.map((section, index) => (
-          <div key={index} className="section-grid">
-            {section.imageOnLeft ? (
-              <>
-                <div className="image-container">
-                  <img
-                    src={section.image}
-                    alt="Adrian Schaefer Photography"
-                  />
-                </div>
-                <div className="text-container">
-                  <p>{section.text}</p>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="text-container text-right">
-                  <p>{section.text}</p>
-                </div>
-                <div className="image-container image-right">
-                  <img
-                    src={section.image}
-                    alt="Adrian Schaefer Photography"
-                  />
-                </div>
-              </>
-            )}
-          </div>
-        ))}
+    <FadeInWrapper>
+      <div
+        className="min-h-screen"
+        style={{
+          backgroundColor: '#141414'
+        }}
+      >
+        <Navbar />
+        <AboutContent sections={sections} />
+        <Footer />
       </div>
-
-      <Footer />
-    </div>
+    </FadeInWrapper>
   );
 }
