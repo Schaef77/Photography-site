@@ -360,6 +360,8 @@ export default function GalleryScroll({ galleries, initialGalleryId }) {
                         objectPosition: 'center'
                       }}
                       priority={index < 3}
+                      placeholder="blur"
+                      blurDataURL={gallery.blurDataURL}
                     />
                   </div>
                   

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { gsap } from 'gsap';
 import Image from 'next/image';
 import './Masonry.css';
@@ -56,6 +56,8 @@ export default function Masonry({
 
   const [containerRef, { width }] = useMeasure();
   const hasAnimatedRef = useRef(false);
+  const [visibleImages, setVisibleImages] = useState(new Set());
+  const imageRefs = useRef({});
 
   const grid = useMemo(() => {
     if (!width) return { items: [], height: 0 };
@@ -90,6 +92,35 @@ export default function Masonry({
 
     return { items: gridItems, height: totalHeight };
   }, [columns, items, width]);
+
+  // Intersection Observer for lazy loading images
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const imageId = entry.target.dataset.imageId;
+            if (imageId) {
+              setVisibleImages(prev => new Set([...prev, imageId]));
+            }
+          }
+        });
+      },
+      {
+        rootMargin: '400px', // Start loading 400px before the image is visible
+        threshold: 0.01
+      }
+    );
+
+    // Observe all image containers
+    Object.values(imageRefs.current).forEach((ref) => {
+      if (ref) observer.observe(ref);
+    });
+
+    return () => observer.disconnect();
+  }, [grid.items.length]);
 
   // Only animate ONCE on initial load
   useLayoutEffect(() => {
@@ -169,10 +200,16 @@ export default function Masonry({
         }
 
         // Render image
+        const isVisible = visibleImages.has(item.id) || index < 6; // Always load first 6 images
+
         return (
           <div
             key={item.id}
             data-key={item.id}
+            data-image-id={item.id}
+            ref={(el) => {
+              if (el) imageRefs.current[item.id] = el;
+            }}
             className="masonry-item-wrapper"
             style={{
               transform: `translate3d(${item.x}px, ${item.y}px, 0)`,
@@ -185,17 +222,34 @@ export default function Masonry({
             onMouseLeave={e => handleMouseLeave(e, item)}
           >
             <div className="masonry-item-img" style={{ position: 'relative' }}>
-              <Image
-                src={item.img}
-                alt={item.alt || 'Gallery image'}
-                fill
-                sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw"
-                style={{
-                  objectFit: 'cover'
-                }}
-                loading={index < 6 ? 'eager' : 'lazy'}
-                priority={index < 3}
-              />
+              {isVisible && (
+                <Image
+                  src={item.img}
+                  alt={item.alt || 'Gallery image'}
+                  fill
+                  sizes="(max-width: 600px) 100vw, (max-width: 1000px) 50vw, 33vw"
+                  style={{
+                    objectFit: 'cover'
+                  }}
+                  loading={index < 6 ? 'eager' : 'lazy'}
+                  priority={index < 3}
+                  placeholder={item.blurDataURL ? "blur" : "empty"}
+                  blurDataURL={item.blurDataURL}
+                />
+              )}
+              {!isVisible && item.blurDataURL && (
+                <div
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    backgroundImage: `url(${item.blurDataURL})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    filter: 'blur(20px)',
+                    transform: 'scale(1.1)'
+                  }}
+                />
+              )}
             </div>
           </div>
         );

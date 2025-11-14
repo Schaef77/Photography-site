@@ -18,6 +18,7 @@ interface Photo {
   src: string;
   width: number;
   height: number;
+  blurDataURL?: string;
   groupId?: string;
   isFirstInGroup?: boolean;
   isNewGroup?: boolean;
@@ -56,6 +57,7 @@ export default function GalleryClient({ gallery }: { gallery: Gallery }) {
       id: `${gallery.id}-${index}`,
       img: photo.src,
       height: scaledHeight,
+      blurDataURL: photo.blurDataURL,
     });
   });
 

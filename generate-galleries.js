@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { imageSize } = require('image-size');
+const sharp = require('sharp');
 
 // Convert folder name to display title
 function formatTitle(folderName) {
@@ -22,6 +23,21 @@ function getImageDimensions(imagePath) {
   } catch (error) {
     console.error(`Error reading dimensions for ${imagePath}:`, error.message);
     return { width: 0, height: 0 };
+  }
+}
+
+// Generate blur placeholder as base64 data URL
+async function generateBlurDataURL(imagePath) {
+  try {
+    const buffer = await sharp(imagePath)
+      .resize(10, 10, { fit: 'inside' })
+      .blur()
+      .toBuffer();
+    const base64 = buffer.toString('base64');
+    return `data:image/jpeg;base64,${base64}`;
+  } catch (error) {
+    console.error(`Error generating blur for ${imagePath}:`, error.message);
+    return null;
   }
 }
 
@@ -64,7 +80,7 @@ function discoverGalleries(galleriesPath, specifiedOrder) {
 }
 
 // Generate galleries data
-function generateGalleries() {
+async function generateGalleries() {
   const galleriesPath = path.join(__dirname, 'public', 'images', 'galleries');
   const galleries = [];
 
@@ -79,7 +95,7 @@ function generateGalleries() {
   // Check for galleries not in the order file
   discoverGalleries(galleriesPath, galleryOrder);
 
-  galleryOrder.forEach(folderName => {
+  for (const folderName of galleryOrder) {
     const galleryPath = path.join(galleriesPath, folderName);
 
     // Skip if folder doesn't exist yet
@@ -102,9 +118,10 @@ function generateGalleries() {
       return;
     }
 
-    // Get cover image dimensions
+    // Get cover image dimensions and blur placeholder
     const coverPath = path.join(galleryPath, coverImage);
     const coverDimensions = getImageDimensions(coverPath);
+    const blurDataURL = await generateBlurDataURL(coverPath);
 
     // Get all photos except cover with dimensions
     const photoFiles = files
@@ -138,20 +155,25 @@ function generateGalleries() {
     const photos = [];
     const groupPrefixes = Object.keys(photoGroups).sort();
 
-    groupPrefixes.forEach((prefix, groupIndex) => {
-      photoGroups[prefix].forEach((file, fileIndex) => {
+    for (const prefix of groupPrefixes) {
+      const groupIndex = groupPrefixes.indexOf(prefix);
+      for (let fileIndex = 0; fileIndex < photoGroups[prefix].length; fileIndex++) {
+        const file = photoGroups[prefix][fileIndex];
         const fullPath = path.join(galleryPath, file);
         const dimensions = getImageDimensions(fullPath);
+        const photoBlurDataURL = await generateBlurDataURL(fullPath);
+
         photos.push({
           src: `/images/galleries/${folderName}/${file}`,
           width: dimensions.width,
           height: dimensions.height,
+          blurDataURL: photoBlurDataURL,
           groupId: prefix,
           isFirstInGroup: fileIndex === 0,
           isNewGroup: groupIndex > 0 && fileIndex === 0
         });
-      });
-    });
+      }
+    }
 
     galleries.push({
       id: folderName,
@@ -159,24 +181,29 @@ function generateGalleries() {
       thumbnail: `/images/galleries/${folderName}/${coverImage}`,
       thumbnailWidth: coverDimensions.width,
       thumbnailHeight: coverDimensions.height,
+      blurDataURL: blurDataURL,
       photos: photos
     });
 
     console.log(`✅ Added ${folderName} - ${photos.length} photos`);
-  });
+  }
 
   return galleries;
 }
 
 // Write to file
-const galleries = generateGalleries();
-const outputPath = path.join(__dirname, 'data', 'galleries.json');
+async function main() {
+  const galleries = await generateGalleries();
+  const outputPath = path.join(__dirname, 'data', 'galleries.json');
 
-// Create data folder if it doesn't exist
-const dataDir = path.join(__dirname, 'data');
-if (!fs.existsSync(dataDir)) {
-  fs.mkdirSync(dataDir);
+  // Create data folder if it doesn't exist
+  const dataDir = path.join(__dirname, 'data');
+  if (!fs.existsSync(dataDir)) {
+    fs.mkdirSync(dataDir);
+  }
+
+  fs.writeFileSync(outputPath, JSON.stringify(galleries, null, 2));
+  console.log(`\n📁 Generated galleries.json with ${galleries.length} galleries`);
 }
 
-fs.writeFileSync(outputPath, JSON.stringify(galleries, null, 2));
-console.log(`\n📁 Generated galleries.json with ${galleries.length} galleries`);
+main().catch(console.error);

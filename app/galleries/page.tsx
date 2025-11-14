@@ -12,7 +12,8 @@ function GalleriesContent() {
   const galleries = galleriesData.map(gallery => ({
     id: gallery.id,
     title: gallery.title,
-    image: gallery.thumbnail
+    image: gallery.thumbnail,
+    blurDataURL: gallery.blurDataURL
   }));
 
   return <GalleryScroll galleries={galleries} initialGalleryId={galleryId} />;
