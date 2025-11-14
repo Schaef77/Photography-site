@@ -4,6 +4,7 @@ import { Montserrat } from 'next/font/google';
 import "./globals.css";
 import LayoutClient from './layout-client';
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -112,6 +113,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <LayoutClient>
           <Analytics/>
+          <SpeedInsights/>
           {children}
         </LayoutClient>
       </body>
