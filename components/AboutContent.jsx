@@ -85,6 +85,9 @@ export default function AboutContent({ sections }) {
                     }}
                     quality={85}
                     loading={index === 0 ? 'eager' : 'lazy'}
+                    priority={index === 0}
+                    placeholder={section.blurDataURL ? "blur" : "empty"}
+                    blurDataURL={section.blurDataURL}
                   />
                 </div>
                 <div className="text-container">
@@ -107,6 +110,8 @@ export default function AboutContent({ sections }) {
                     }}
                     quality={85}
                     loading="lazy"
+                    placeholder={section.blurDataURL ? "blur" : "empty"}
+                    blurDataURL={section.blurDataURL}
                   />
                 </div>
               </>
