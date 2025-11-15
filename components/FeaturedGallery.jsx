@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
@@ -40,7 +40,7 @@ export default function FeaturedGallery({ images }) {
     setLightboxOpen(true);
   };
 
-  const handleLightboxClose = () => {
+  const handleLightboxClose = useCallback(() => {
     // Scroll to the image that was being viewed
     const imageElement = document.querySelector(`[data-key="featured-${lightboxIndex}"]`);
     if (imageElement) {
@@ -53,7 +53,27 @@ export default function FeaturedGallery({ images }) {
 
     // Close lightbox
     setLightboxOpen(false);
-  };
+  }, [lightboxIndex]);
+
+  const handleImageHover = useCallback((e, isEntering) => {
+    if (isEntering) {
+      e.currentTarget.style.transform = 'scale(1.02)';
+      e.currentTarget.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.4)';
+    } else {
+      e.currentTarget.style.transform = 'scale(1)';
+      e.currentTarget.style.boxShadow = 'none';
+    }
+  }, []);
+
+  const handleButtonHover = useCallback((e, isEntering) => {
+    if (isEntering) {
+      e.currentTarget.style.borderColor = '#c9a961';
+      e.currentTarget.style.color = '#c9a961';
+    } else {
+      e.currentTarget.style.borderColor = 'white';
+      e.currentTarget.style.color = 'white';
+    }
+  }, []);
 
   return (
     <div style={{ backgroundColor: '#141414', padding: '80px 0' }}>
@@ -96,14 +116,8 @@ export default function FeaturedGallery({ images }) {
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease'
               }}
               className="gallery-item"
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'scale(1.02)';
-                e.currentTarget.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.4)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}
+              onMouseEnter={(e) => handleImageHover(e, true)}
+              onMouseLeave={(e) => handleImageHover(e, false)}
             >
               <Image
                 src={item.src}
@@ -138,14 +152,8 @@ export default function FeaturedGallery({ images }) {
               transition: 'all 0.3s ease',
               backgroundColor: 'transparent'
             }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = '#c9a961';
-              e.currentTarget.style.color = '#c9a961';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = 'white';
-              e.currentTarget.style.color = 'white';
-            }}
+            onMouseEnter={(e) => handleButtonHover(e, true)}
+            onMouseLeave={(e) => handleButtonHover(e, false)}
           >
             View More Galleries
           </Link>

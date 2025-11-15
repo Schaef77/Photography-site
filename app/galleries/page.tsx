@@ -2,8 +2,14 @@
 
 import { Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
-import GalleryScroll from '../../components/GalleryScroll';
+import dynamic from 'next/dynamic';
 import galleriesData from '../../data/galleries.json';
+
+// Dynamically import GalleryScroll to reduce initial bundle size
+const GalleryScroll = dynamic(() => import('../../components/GalleryScroll'), {
+  ssr: false,
+  loading: () => <div style={{ minHeight: '100vh', backgroundColor: '#141414' }} />
+});
 
 function GalleriesContent() {
   const searchParams = useSearchParams();

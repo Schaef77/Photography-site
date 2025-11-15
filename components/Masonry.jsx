@@ -109,7 +109,7 @@ export default function Masonry({
         });
       },
       {
-        rootMargin: '400px', // Start loading 400px before the image is visible
+        rootMargin: '200px', // Start loading 200px before the image is visible
         threshold: 0.01
       }
     );
@@ -200,7 +200,7 @@ export default function Masonry({
         }
 
         // Render image
-        const isVisible = visibleImages.has(item.id) || index < 6; // Always load first 6 images
+        const isVisible = visibleImages.has(item.id) || index < 3; // Always load first 3 images
 
         return (
           <div
@@ -231,7 +231,7 @@ export default function Masonry({
                   style={{
                     objectFit: 'cover'
                   }}
-                  loading={index < 6 ? 'eager' : 'lazy'}
+                  loading={index < 3 ? 'eager' : 'lazy'}
                   priority={index < 3}
                   placeholder={item.blurDataURL ? "blur" : "empty"}
                   blurDataURL={item.blurDataURL}
